@@ -13,6 +13,11 @@
                     <td>$getNo</td>
                     <td>$getName</td>
                     <td><a href=\"propile.php?no={$getNo}\">프로필보기</a></td>
+                    <td>
+                        <a href=\"profile_update_form.php?no={$getNo}\">수정</a>
+                        <a href=\"process_profile_delete.php?no={$getNo}\">삭제</a>
+                        
+                    </td>
                 </tr>
         ";
     }
@@ -32,11 +37,15 @@
             
         </div>
         <div class="list">
+           <div class="btn_box">
+               <a href="propile_create_form.php">생성하기</a>
+           </div>
             <table border>
                 <tr>
                     <td>번호</td>
                     <td>이름</td>
                     <td>프로필보기</td>
+                    <td>기능</td>
                 </tr>
                 <?php echo $trData; ?>
             </table>
