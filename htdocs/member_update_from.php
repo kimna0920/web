@@ -22,10 +22,10 @@
 </head>
 <body>
     <div class="wrap">
-        <form action="process_member_create.php" method="post">
+        <form action="process_member_update.php" method="post">
             <div class="input_form">
                 <label for="id">아이디</label>
-                    <input type="text" name="id" id="id" value="<?php echo $getId ?>">
+                    <input type="text" name="id" id="id" value="<?php echo $getId ?>" disabled>
             </div>
              <div class="input_form">
                 <label for="pw">비밀번호</label>
@@ -48,6 +48,7 @@
                     <input type="text" name="mbti" id="mbti" value="<?php echo $getMbti ?>" placeholder="mbti를 입력해주세요">
             </div>
                <div class="btn_box">
+                    <input type="hidden" name="no" value="<?php echo $getNo; ?>">
                    <input type="submit" value="수정">
                    <input type="reset" value="취소">
                </div>
